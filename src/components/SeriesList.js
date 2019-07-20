@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { isSymbol } from 'util';
+import uuid from 'uuid/v1'
 
 const SeriesList = () => {
     const [series, setSeries] = useState([ // This could come from an API
@@ -13,7 +13,7 @@ const SeriesList = () => {
         { id: 8, title: "Once upon a time" },
     ])
     const addSeries = () => {
-        setSeries([...series, { title: "The Vampire diaries", id: 9 } ])
+        setSeries([...series, { title: "The Vampire diaries", id: uuid() } ])
     }
     return (
         <div>
