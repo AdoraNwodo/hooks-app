@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import uuid from 'uuid/v1'
+import NewSeriesForm from './NewSeriesForm';
 
 const SeriesList = () => {
     const [series, setSeries] = useState([ // This could come from an API
@@ -12,15 +13,15 @@ const SeriesList = () => {
         { id: 7, title: "Power" },
         { id: 8, title: "Once upon a time" },
     ])
-    const addSeries = () => {
-        setSeries([...series, { title: "The Vampire diaries", id: uuid() } ])
+    const addSeries = (title) => {
+        setSeries([...series, { title, id: uuid() } ])
     }
     return (
         <div>
             <ul>
                 { series.map(item => (<li key={item.id}>{item.title}</li>)) }
             </ul>
-            <button onClick={addSeries}>Add Series</button>
+            <NewSeriesForm addSeries={addSeries}/>
         </div>
     )
 }
