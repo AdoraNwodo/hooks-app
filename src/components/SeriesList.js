@@ -12,11 +12,15 @@ const SeriesList = () => {
         { id: 7, title: "Power" },
         { id: 8, title: "Once upon a time" },
     ])
+    const addSeries = () => {
+        setSeries([...series, { title: "The Vampire diaries", id: 9 } ])
+    }
     return (
         <div>
             <ul>
                 { series.map(item => (<li key={item.id}>{item.title}</li>)) }
             </ul>
+            <button onClick={addSeries}>Add Series</button>
         </div>
     )
 }
