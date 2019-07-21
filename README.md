@@ -2,11 +2,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # React Context Hooks App
 
-This is a basic project that shows that to use React Hooks.
+This is a basic project that shows how to use React Hooks.
 
 ## Getting Started
 
 To use this project, download or clone this repository:
+
 SSH: `git@github.com:AdoraNwodo/hooks-app.git`
 HTTPS: `https://github.com/AdoraNwodo/hooks-app.git`
 
